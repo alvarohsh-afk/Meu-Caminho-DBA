@@ -12,3 +12,13 @@ Um projeto de Data Warehouse estruturado, incluindo:
 - Criação de usuários e gestão de privilégios.
 - Modelagem de tabelas com Chaves Primárias e Estrangeiras.
 - Relatórios analíticos de folha de pagamento com `INNER JOIN` e `GROUP BY`.
+
+pie showData
+    title Resumo de Critérios (Distribuição)
+    "Mod. Conceitual" : 9
+    "Integridade" : 9
+    "Mod. Lógica" : 8
+    "Padronização" : 8
+    "Manutenibilidade" : 8
+    "Performance" : 7
+    "Escalabilidade" : 6

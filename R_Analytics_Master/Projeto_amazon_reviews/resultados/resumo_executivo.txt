@@ -1,0 +1,14 @@
+RELATÓRIO - ANÁLISE AMAZON REVIEWS
+==================================
+Data: 20584 
+Total de reviews: 1000 
+Nota média geral: 4.14 /5
+
+Categorias analisadas:
+# A tibble: 4 × 3
+  product_category total_reviews rating_medio
+  <chr>                    <int>        <dbl>
+1 Books                      277         4.15
+2 Clothing                   242         4.16
+3 Electronics                257         4.12
+4 Home & Kitchen             224         4.11

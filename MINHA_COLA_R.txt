@@ -1,0 +1,160 @@
+🔥 COLA 1 - O QUE RODAR PRIMEIRO (TODA SESSÃO)
+
+# ============================================
+# PASSO 1: LIMPAR TUDO (começar do zero)
+# ============================================
+rm(list = ls())        # Limpa todos os dados da memória
+gc()                   # Libera memória
+graphics.off()         # Fecha todos os gráficos
+
+# ============================================
+# PASSO 2: CARREGAR SEU ARSENAL
+# ============================================
+source("arsenal_seguro.R")
+carregar_pacotes()
+
+# ============================================
+# PASSO 3: CRIAR OU CARREGAR DADOS
+# ============================================
+# Opção A: Dados de teste (para treinar)
+dados <- criar_dados_teste(100)
+
+# Opção B: Seus próprios dados
+# dados <- read.csv("caminho/do/seu/arquivo.csv")
+
+# ============================================
+# PASSO 4: VER OS DADOS (sempre comece aqui)
+# ============================================
+head(dados)            # Primeiras linhas
+str(dados)             # Estrutura (tipos de cada coluna)
+summary(dados)         # Estatísticas básicas
+names(dados)           # Nomes das colunas
+
+# ============================================
+# PASSO 5: ANÁLISE RÁPIDA (já tem no seu arsenal)
+
+# ============================================
+analise_rapida(dados)
+
+COLA 2 - COMANDOS MAIS USADOS (SEU DIA A DIA)
+
+# ============================================
+# SELECIONAR DADOS (dplyr)
+# ============================================
+
+# Filtrar linhas (WHERE do SQL)
+dados_filtrados <- dados %>% filter(idade > 18)
+dados_filtrados <- dados %>% filter(categoria == "A")
+
+# Selecionar colunas
+dados_colunas <- dados %>% select(nome, idade, valor)
+
+# Criar nova coluna
+dados <- dados %>% mutate(nova_coluna = valor * 2)
+
+# Agrupar e resumir
+resumo <- dados %>% 
+  group_by(categoria) %>% 
+  summarise(total = sum(valor), media = mean(valor))
+
+# ============================================
+# SQL DENTRO DO R (se vc pensa em SQL)
+# ============================================
+library(sqldf)
+
+resultado <- sqldf("
+  SELECT 
+    categoria,
+    COUNT(*) as total,
+    SUM(valor) as soma
+  FROM dados
+  GROUP BY categoria
+")
+
+# ============================================
+# GRÁFICOS RÁPIDOS (ggplot2)
+# ============================================
+
+# Dispersão
+ggplot(dados, aes(x = coluna1, y = coluna2)) + geom_point()
+
+# Barras
+ggplot(dados, aes(x = categoria, y = valor)) + geom_col()
+
+# Histograma
+ggplot(dados, aes(x = valor)) + geom_histogram()
+
+# Boxplot
+ggplot(dados, aes(x = categoria, y = valor)) + geom_boxplot()
+
+# ============================================
+# ESTATÍSTICA BÁSICA
+# ============================================
+
+# Correlação
+cor(dados$coluna1, dados$coluna2)
+
+# Teste T (comparar 2 grupos)
+t.test(valor ~ grupo, data = dados)
+
+# Regressão linear
+modelo <- lm(valor ~ idade + score, data = dados)
+summary(modelo)
+
+COLA 3 - QUANDO ESQUECE O NOME DE ALGO (MAIS ÚTIL)
+
+# ============================================
+# "ESQUECI NOME DA FUNÇÃO" → USE HELP
+# ============================================
+
+# Ver funções de um pacote
+library(help = "dplyr")
+
+# Buscar função por palavra-chave
+??"regressão"
+??"correlação"
+
+# Ver o que uma função faz
+?mean
+?filter
+?ggplot
+
+# Ver exemplos prontos
+example(mean)
+example(ggplot)
+
+# ============================================
+# "ESQUECI O NOME DA COLUNA"
+# ============================================
+names(dados)                    # Todas as colunas
+colnames(dados)                 # Mesma coisa
+
+# ============================================
+# "ESQUECI SE O DADO EXISTE"
+# ============================================
+ls()                            # Lista objetos na memória
+exists("dados")                 # TRUE/FALSE se dados existe
+
+# ============================================
+# "O CÓDIGO DEU ERRO"
+# ============================================
+traceback()                     # Mostra onde foi o erro
+options(error = recover)        # Modo debug (avançado)
+
+COLA 4 - SEU FLUXO DE TRABALHO (DECORE ESSA ORDEM)
+
+1. LIMPAR: rm(list = ls())
+2. CARREGAR: source("arsenal_seguro.R") + carregar_pacotes()
+3. DADOS: criar_dados_teste() ou read.csv()
+4. VER: head() + str() + summary()
+5. ANALISAR: analise_rapida() ou SQL ou gráficos
+6. SE ERRAR: traceback() + ajustar.
+
+      **#&#**
+# MEUS ARQUIVOS IMPORTANTES
+# ============================================
+# amazon-reviews → análise de reviews da Amazon (Kaggle)
+# local: ~/Documentos/kaggle/amazon-reviews
+
+
+         ##*##

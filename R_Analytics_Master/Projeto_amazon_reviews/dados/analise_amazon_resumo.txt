@@ -1,0 +1,14 @@
+RELATÓRIO EXECUTIVO - ANÁLISE DE REVIEWS AMAZON
+===============================================
+
+Data da análise: 20584 
+Total de reviews analisados: 1000 
+
+PRINCIPAIS MÉTRICAS:
+- Nota média: 4.09 /5
+- Categoria com melhor nota: Books 
+- Categoria com pior nota: Electronics 
+
+MODELAGEM PREDITIVA:
+- Melhor modelo: Random Forest 
+- Erro médio de predição (RMSE): 0.779 

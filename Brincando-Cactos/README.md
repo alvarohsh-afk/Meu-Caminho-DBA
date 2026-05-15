@@ -1,24 +1,16 @@
-# 🚀 Minha Evolução como DBA Oracle
+# Análise de Risco Bancário e Performance Financeira 📊
 
-Este repositório demonstra minha transição de estudos iniciais para a construção de soluções profissionais de Banco de Dados.
+Este projeto focado em **Business Intelligence** utiliza Linguagem R para analisar comportamentos históricos e validar métricas de risco em operações financeiras de alto valor.
 
-### 🌵 Laboratório: Brincando com Dados
-Localizado na pasta `/Brincando-Cactos`. 
-Neste espaço, utilizei dados da minha coleção de cactos e suculentas para treinar a lógica de inserção e comandos DDL básicos no Oracle 21c.
+## 🚀 Destaques do Projeto
+- **Pensamento Analítico**: Transformação de dados brutos em indicadores de decisão estratégica.
+- **Ecossistema R**: Uso de Tidyverse para manipulação eficiente de grandes volumes de dados.
+- **Visualização de Dados**: Gráficos otimizados para apresentação executiva (localizados na pasta `/relatorios`).
 
-### 💼 Projeto Profissional: Enterprise RH
-Localizado na pasta `/Projeto-Empresa-RH`.
-Um projeto de Data Warehouse estruturado, incluindo:
-- Criação de usuários e gestão de privilégios.
-- Modelagem de tabelas com Chaves Primárias e Estrangeiras.
-- Relatórios analíticos de folha de pagamento com `INNER JOIN` e `GROUP BY`.
+## 🛠️ Competências Aplicadas
+- Modelagem de dados financeiros e bancários.
+- Versionamento e governança via Git.
+- Resolução de problemas complexos de integração e deploy em terminal.
 
-pie showData
-    title Resumo de Critérios (Distribuição)
-    "Mod. Conceitual" : 9
-    "Integridade" : 9
-    "Mod. Lógica" : 8
-    "Padronização" : 8
-    "Manutenibilidade" : 8
-    "Performance" : 7
-    "Escalabilidade" : 6
+---
+*Projeto integrante do meu portfólio de Business Intelligence & Data Strategy.*
